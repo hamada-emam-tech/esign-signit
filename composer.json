@@ -1,0 +1,30 @@
+{
+    "name": "hamada-emam-tech/esign-signit",
+    "description": "Signit (signit.sa) driver for hamada-emam-tech/esign: Saudi DGA-licensed e-signature with Nafath, and encrypted webhooks.",
+    "keywords": ["esign", "e-signature", "signit", "saudi", "nafath", "dga"],
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^8.2",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "hamada-emam-tech/esign": "^0.3",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/simple-cache": "^1.0 || ^2.0 || ^3.0"
+    },
+    "suggest": {
+        "guzzlehttp/guzzle": "A PSR-18 HTTP client, picked up automatically",
+        "symfony/http-client": "A PSR-18 HTTP client, picked up automatically"
+    },
+    "autoload": {
+        "psr-4": { "HamadaEmamTech\\Esign\\Signit\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "HamadaEmamTech\\Esign\\Signit\\Tests\\": "tests/" }
+    },
+    "extra": {
+        "esign": { "providers": { "signit": "HamadaEmamTech\\Esign\\Signit\\SignitFactory" } }
+    },
+    "minimum-stability": "stable"
+}
